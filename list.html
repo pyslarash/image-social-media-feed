@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Connecting Roboto font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Connecting Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Connecting Font Awesome because why not-->
+  <script src="https://kit.fontawesome.com/d40adb1550.js" crossorigin="anonymous"></script>
+  <!-- Connecting styles.css -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Photo Feed - List</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid mx-auto" style="width: 60%;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- This is the logo -->
+      <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <!-- Empty space -->
+        <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+        <!-- The right part of the navbar-->
+        <form class="d-flex" role="search">
+          <!--The Modal Button -->
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPost">
+            Create New Post
+          </button>
+          <!-- The Modal itself-->
+          <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalLabel">Create a New Post</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal form -->
+                <div class="modal-body">
+                  <label for="caption" class="form-label">Caption</label>
+                  <textarea class="form-control" id="caption" rows="3"></textarea><br>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-camera"></i></button>
+                  <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+                <!-- End modal form -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal End -->
+          &nbsp;
+          <!-- Dropdown button -->
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessability</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" id="log-out" href="#">Log Out</a></li>
+            </ul>
+          </div>
+          <!-- End dropdown -->
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+  <!-- View switcher -->
+  <div class="m-3 d-grid gap-2 d-md-block text-center">
+    <button class="btn btn-link" type="button" onclick="document.location='index.html'"><i class="fa-solid fa-table-cells"></i></button>
+    <button class="btn btn-link" type="button" onclick="document.location='list.html'"><i class="fa-solid fa-square"></i></button>
+  </div>
+  <!-- View switcher end -->
+  <!-- Photo list -->
+  <div class="container-fluid d-grid gap-3" style="width: 40%;">
+    <!-- Photo #1 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Fall
+                </div>
+                <div class="col text-end">
+                    11/04/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/trees.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>9999 likes</strong></p>
+            <p class="card-text">I just wanted to share some fall views with you today!</p>
+        </div>
+    </div>
+    <!-- Photo #2 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Hot Air Baloons
+                </div>
+                <div class="col text-end">
+                    11/01/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/baloons.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>1313 likes</strong></p>
+            <p class="card-text">Took a photo of thee amazing hot air baloons while I was flying on one</p>
+        </div>
+    </div>
+    <!-- Photo #3 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Delish Dish
+                </div>
+                <div class="col text-end">
+                    10/29/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/food.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>666 likes</strong></p>
+            <p class="card-text">I had to post a photo of food in my feed.</p>
+        </div>
+    </div>
+    <!-- Photo #4 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    A Photo
+                </div>
+                <div class="col text-end">
+                    10/21/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/girl.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>4 likes</strong></p>
+            <p class="card-text">Using a retro camera!</p>
+        </div>
+    </div>
+    <!-- Photo #5 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Road Sign
+                </div>
+                <div class="col text-end">
+                    10/03/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/sign.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>9 likes</strong></p>
+            <p class="card-text">Windy road ahead</p>
+        </div>
+    </div>
+    <!-- Photo #6 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    The Parrot
+                </div>
+                <div class="col text-end">
+                    09/13/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/parrot.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>3215 likes</strong></p>
+            <p class="card-text">Just look whom I met today!</p>
+        </div>
+    </div>
+    <!-- Photo #7 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    The City
+                </div>
+                <div class="col text-end">
+                    09/11/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/city.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>876 likes</strong></p>
+            <p class="card-text">I hope you'll enjoy the view of the city.</p>
+        </div>
+    </div>
+    <!-- Photo #8 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Fall Is Early
+                </div>
+                <div class="col text-end">
+                    08/26/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/leaves.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>456 likes</strong></p>
+            <p class="card-text">The fall came early this year!</p>
+        </div>
+    </div>
+    <!-- Photo #9 -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    Turkish Coffee
+                </div>
+                <div class="col text-end">
+                    08/15/22
+                </div>
+            </div>
+        </div>
+        <img src="./pics/coffee.jpg" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text"><strong>5894 likes</strong></p>
+            <p class="card-text">Been enjoying some Turkish coffee. Yum!</p>
+        </div>
+    </div>
+  </div>
+  <!-- Photo list end -->
+  <!-- JavaScript Bootstrap connector because we need fancy -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
